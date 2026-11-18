@@ -1,0 +1,155 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Library Management System</title>
+
+    <link rel="stylesheet" href="library.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <header>
+            <div>
+                <h1>LibraDesk</h1>
+                <p>Library Management System</p>
+            </div>
+
+            <span class="admin">Admin Panel</span>
+        </header>
+
+        <section class="dashboard">
+
+            <div class="stat-card">
+                <h3>Total Books</h3>
+                <h2 id="totalBooks">3</h2>
+            </div>
+
+            <div class="stat-card">
+                <h3>Available Books</h3>
+                <h2 id="availableBooks">2</h2>
+            </div>
+
+            <div class="stat-card">
+                <h3>Issued Books</h3>
+                <h2 id="issuedBooks">1</h2>
+            </div>
+
+        </section>
+
+        <section class="form-section">
+
+            <h2 id="formHeading">Add New Book</h2>
+
+            <form id="bookForm">
+
+                <input type="hidden" id="editId">
+
+                <div class="form-grid">
+
+                    <input
+                        type="text"
+                        id="title"
+                        placeholder="Book Title"
+                        required
+                    >
+
+                    <input
+                        type="text"
+                        id="author"
+                        placeholder="Author Name"
+                        required
+                    >
+
+                    <input
+                        type="text"
+                        id="isbn"
+                        placeholder="ISBN Number"
+                        required
+                    >
+
+                    <select id="status">
+                        <option value="Available">Available</option>
+                        <option value="Issued">Issued</option>
+                    </select>
+
+                </div>
+
+                <div class="form-buttons">
+
+                    <button type="submit" id="submitBtn">
+                        Add Book
+                    </button>
+
+                    <button
+                        type="button"
+                        id="cancelBtn"
+                        class="cancel-btn"
+                        hidden
+                    >
+                        Cancel
+                    </button>
+
+                </div>
+
+            </form>
+
+        </section>
+
+        <section class="books-section">
+
+            <div class="section-heading">
+
+                <h2>Book Collection</h2>
+
+                <input
+                    type="text"
+                    id="search"
+                    placeholder="Search books..."
+                >
+
+            </div>
+
+            <div class="table-wrapper">
+
+                <table>
+
+                    <thead>
+                        <tr>
+                            <th>Book Title</th>
+                            <th>Author</th>
+                            <th>ISBN</th>
+                            <th>Status</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="bookList">
+                    </tbody>
+
+                </table>
+
+            </div>
+
+            <p id="emptyMessage" hidden>
+                No books found.
+            </p>
+
+        </section>
+
+        <footer>
+            <p>Library Management System | MT-1 Practical SEM 3</p>
+        </footer>
+
+    </div>
+
+    <script src="library.js"></script>
+
+</body>
+</html>

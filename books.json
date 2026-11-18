@@ -1,0 +1,20 @@
+[
+    {
+        "id": 1,
+        "title": "The Shining",
+        "author": "Stephen King",
+        "category": "Horror"
+    },
+    {
+        "id": 2,
+        "title": "White Nights",
+        "author": "Fyodor Dostoevsky",
+        "category": "Fiction"
+    },
+    {
+        "id": 3,
+        "title": "And Then There Were None",
+        "author": "Agatha Christie",
+        "category": "Mystery"
+    }
+]
